@@ -1,239 +1,285 @@
-// src/data/session5.js
 export const session5 = [
-  // === SELECCIÓN SIMPLE ===
   {
     type: "single",
-    question: "¿Cuál es el propósito principal del análisis semántico en un compilador?",
+    question: "¿Cuál es el objetivo principal de la fase de compilación?",
     options: [
-      "Detectar errores de gramática",
-      "Verificar la corrección de tipos y significados en el código",
-      "Optimizar el rendimiento del programa",
-      "Generar código intermedio"
+      "Transformar código fuente en un programa ejecutable",
+      "Depurar errores en tiempo de ejecución",
+      "Ejecutar código directamente sin análisis",
+      "Simplificar la interfaz de usuario"
     ],
-    answer: "Verificar la corrección de tipos y significados en el código",
-    explanation: "El análisis semántico valida que las operaciones del programa sean coherentes con los tipos y declaraciones."
-  },
-  {
-    type: "single",
-    question: "¿Qué paradigma de programación se basa en la composición de funciones sin estado ni efectos secundarios?",
-    options: [
-      "Programación estructurada",
-      "Programación funcional",
-      "Programación lógica",
-      "Programación orientada a objetos"
-    ],
-    answer: "Programación funcional",
-    explanation: "El paradigma funcional se basa en funciones puras y evita cambios de estado."
-  },
-  {
-    type: "single",
-    question: "¿Cuál de los siguientes lenguajes es un ejemplo de lenguaje funcional?",
-    options: ["Python", "Lisp", "C++", "Java"],
-    answer: "Lisp",
-    explanation: "Lisp fue uno de los primeros lenguajes diseñados para el paradigma funcional."
-  },
-  {
-    type: "single",
-    question: "¿Qué característica distingue principalmente la programación lógica?",
-    options: [
-      "Uso de clases y objetos",
-      "Declaración de hechos y reglas",
-      "Estructuras de control secuencial",
-      "Encapsulación de datos"
-    ],
-    answer: "Declaración de hechos y reglas",
-    explanation: "La programación lógica se basa en expresar relaciones mediante hechos y reglas lógicas."
-  },
-  {
-    type: "single",
-    question: "¿Qué estructura de datos representa mejor una base de conocimiento en Prolog?",
-    options: ["Árbol binario", "Hechos y reglas", "Lista enlazada", "Tabla hash"],
-    answer: "Hechos y reglas",
-    explanation: "Prolog organiza el conocimiento en hechos y reglas lógicas para hacer inferencias."
+    answer: "Transformar código fuente en un programa ejecutable",
+    explanation: "El proceso de compilación traduce y prepara el código fuente para su ejecución."
   },
 
-  // === SELECCIÓN MÚLTIPLE ===
-  {
-    type: "multiple",
-    question: "Selecciona los paradigmas de programación más comunes.",
-    options: [
-      "Imperativo",
-      "Funcional",
-      "Lógico",
-      "Declarativo",
-      "Cuántico"
-    ],
-    answer: ["Imperativo", "Funcional", "Lógico", "Declarativo"],
-    explanation: "Los paradigmas más estudiados son imperativo, funcional, lógico y declarativo."
-  },
-  {
-    type: "multiple",
-    question: "Selecciona las características de la programación orientada a objetos.",
-    options: [
-      "Herencia",
-      "Encapsulación",
-      "Inmutabilidad",
-      "Polimorfismo"
-    ],
-    answer: ["Herencia", "Encapsulación", "Polimorfismo"],
-    explanation: "Estos son pilares fundamentales del paradigma orientado a objetos."
-  },
-  {
-    type: "multiple",
-    question: "Selecciona los elementos semánticos que el compilador debe verificar.",
-    options: [
-      "Tipos de datos en expresiones",
-      "Uso de variables no declaradas",
-      "Errores de indentación",
-      "Cantidad de parámetros en funciones"
-    ],
-    answer: [
-      "Tipos de datos en expresiones",
-      "Uso de variables no declaradas",
-      "Cantidad de parámetros en funciones"
-    ],
-    explanation: "El análisis semántico detecta estos errores de significado y coherencia del código."
-  },
-  {
-    type: "multiple",
-    question: "Selecciona los beneficios de la programación funcional.",
-    options: [
-      "Evita efectos secundarios",
-      "Facilita la depuración",
-      "Favorece el paralelismo",
-      "Depende del orden de ejecución"
-    ],
-    answer: [
-      "Evita efectos secundarios",
-      "Facilita la depuración",
-      "Favorece el paralelismo"
-    ],
-    explanation: "Las funciones puras mejoran la confiabilidad y paralelización del código."
-  },
-
-  // === VERDADERO / FALSO ===
   {
     type: "boolean",
-    question: "En la programación funcional las variables son mutables por defecto.",
+    question: "Las primeras fases del compilador conforman el front-end.",
+    answer: true,
+    explanation: "Incluyen análisis léxico, sintáctico y semántico."
+  },
+
+  {
+    type: "fill",
+    question: "El front-end de un compilador se encarga de analizar el significado del ____ fuente.",
+    answer: "programa",
+    explanation: "El front-end comprende el código fuente y genera representaciones intermedias."
+  },
+
+  {
+    type: "multiple",
+    question: "Selecciona las fases que forman parte del proceso de compilación:",
+    options: [
+      "Análisis léxico",
+      "Análisis sintáctico",
+      "Generación de código intermedio",
+      "Ejecución en máquina virtual"
+    ],
+    answer: ["Análisis léxico", "Análisis sintáctico", "Generación de código intermedio"],
+    explanation: "Estas son fases fundamentales del proceso de compilación."
+  },
+
+  {
+    type: "boolean",
+    question: "Un pase puede contener una o varias fases del compilador.",
+    answer: true,
+    explanation: "Los pases agrupan fases secuenciales dentro del proceso de compilación."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué tarea realiza el análisis léxico?",
+    options: [
+      "Agrupa caracteres en tokens",
+      "Verifica tipos de datos",
+      "Genera el código máquina",
+      "Optimiza la memoria"
+    ],
+    answer: "Agrupa caracteres en tokens",
+    explanation: "El escáner convierte caracteres en unidades significativas llamadas tokens."
+  },
+
+  {
+    type: "fill",
+    question: "El análisis léxico también se conoce como ____.",
+    answer: "escaneo",
+    explanation: "El escaneo identifica y agrupa los símbolos del código fuente."
+  },
+
+  {
+    type: "boolean",
+    question: "El escáner elimina comentarios y caracteres innecesarios del código fuente.",
+    answer: true,
+    explanation: "Esto simplifica la tarea del analizador sintáctico."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué produce el análisis sintáctico?",
+    options: [
+      "Árbol de análisis sintáctico",
+      "Código de máquina",
+      "Tabla de símbolos",
+      "Ejecutable optimizado"
+    ],
+    answer: "Árbol de análisis sintáctico",
+    explanation: "El parser organiza los tokens en estructuras jerárquicas basadas en la gramática."
+  },
+
+  {
+    type: "multiple",
+    question: "Selecciona características de una gramática libre de contexto:",
+    options: [
+      "Define la sintaxis del lenguaje",
+      "Utiliza reglas recursivas",
+      "Representa la semántica de ejecución",
+      "Permite árboles sintácticos"
+    ],
+    answer: ["Define la sintaxis del lenguaje", "Utiliza reglas recursivas", "Permite árboles sintácticos"],
+    explanation: "Las gramáticas libres de contexto definen cómo se construyen las estructuras válidas."
+  },
+
+  {
+    type: "boolean",
+    question: "El análisis sintáctico comprueba el significado del programa.",
     answer: false,
-    explanation: "Las variables son inmutables; su valor no cambia una vez asignado."
-  },
-  {
-    type: "boolean",
-    question: "El análisis semántico se realiza después del análisis sintáctico.",
-    answer: true,
-    explanation: "El compilador verifica la sintaxis antes de analizar el significado."
-  },
-  {
-    type: "boolean",
-    question: "El polimorfismo permite utilizar una misma función con diferentes tipos de datos.",
-    answer: true,
-    explanation: "Es una de las bases de la orientación a objetos."
-  },
-  {
-    type: "boolean",
-    question: "Los lenguajes lógicos utilizan inferencia para resolver consultas.",
-    answer: true,
-    explanation: "Prolog, por ejemplo, usa inferencia lógica para derivar conclusiones."
-  },
-  {
-    type: "boolean",
-    question: "En el paradigma declarativo, el programador especifica cómo realizar una tarea paso a paso.",
-    answer: false,
-    explanation: "El programador indica qué se debe lograr, no cómo hacerlo."
+    explanation: "Solo verifica la estructura sintáctica; el significado lo analiza la semántica."
   },
 
-  // === COMPLETAR ===
   {
-    type: "fill",
-    question: "La programación ________ se basa en la definición de clases y objetos.",
-    answer: "orientada a objetos",
-    explanation: "La POO organiza el código en entidades que combinan datos y comportamiento."
+    type: "single",
+    question: "¿Qué estructura usa el compilador para registrar información de los identificadores?",
+    options: ["Tabla de símbolos", "Árbol binario", "Pila de ejecución", "Heap"],
+    answer: "Tabla de símbolos",
+    explanation: "La tabla de símbolos almacena los identificadores, sus tipos y ámbitos."
   },
+
   {
     type: "fill",
-    question: "El paradigma ________ describe los problemas mediante hechos y reglas.",
-    answer: "lógico",
-    explanation: "Los lenguajes lógicos como Prolog utilizan hechos y reglas para representar conocimiento."
-  },
-  {
-    type: "fill",
-    question: "Una función ________ no tiene efectos secundarios y produce siempre el mismo resultado.",
-    answer: "pura",
-    explanation: "Las funciones puras son una característica esencial de la programación funcional."
-  },
-  {
-    type: "fill",
-    question: "El proceso de asignar significado a las estructuras sintácticas se llama análisis ________.",
+    question: "El análisis que determina el significado del código se llama análisis ____.",
     answer: "semántico",
-    explanation: "Esta fase del compilador valida la coherencia semántica del código."
-  },
-  {
-    type: "fill",
-    question: "El concepto de ________ permite ocultar la implementación interna de un objeto.",
-    answer: "encapsulación",
-    explanation: "La encapsulación protege los datos del acceso directo."
+    explanation: "El análisis semántico valida el uso coherente de los identificadores y tipos."
   },
 
-  // === EMPAREJAR ===
   {
-    type: "match",
-    question: "Relaciona el paradigma con su característica principal.",
-    pairs: {
-      left: ["Imperativo", "Funcional", "Lógico", "Orientado a objetos"],
-      right: [
-        "Secuencia de instrucciones y cambios de estado",
-        "Uso de funciones puras",
-        "Uso de hechos y reglas",
-        "Modela entidades con atributos y métodos"
-      ]
-    },
-    answer: {
-      "Imperativo": "Secuencia de instrucciones y cambios de estado",
-      "Funcional": "Uso de funciones puras",
-      "Lógico": "Uso de hechos y reglas",
-      "Orientado a objetos": "Modela entidades con atributos y métodos"
-    },
-    explanation: "Cada paradigma tiene una forma distinta de expresar la solución de un problema."
+    type: "boolean",
+    question: "El analizador semántico puede verificar si un identificador se usa antes de ser declarado.",
+    answer: true,
+    explanation: "Esta es una de las funciones clave de la fase semántica."
   },
+
   {
-    type: "match",
-    question: "Relaciona el concepto con su descripción.",
-    pairs: {
-      left: ["Herencia", "Polimorfismo", "Encapsulación", "Abstracción"],
-      right: [
-        "Reutilización de comportamiento en subclases",
-        "Un mismo método actúa diferente según el contexto",
-        "Ocultar detalles internos",
-        "Representar solo los aspectos esenciales"
-      ]
-    },
-    answer: {
-      "Herencia": "Reutilización de comportamiento en subclases",
-      "Polimorfismo": "Un mismo método actúa diferente según el contexto",
-      "Encapsulación": "Ocultar detalles internos",
-      "Abstracción": "Representar solo los aspectos esenciales"
-    },
-    explanation: "Estos son los cuatro pilares fundamentales de la programación orientada a objetos."
+    type: "multiple",
+    question: "Selecciona reglas que se verifican durante el análisis semántico:",
+    options: [
+      "Cada identificador debe declararse antes de usarse",
+      "El número y tipo de argumentos debe coincidir",
+      "Las variables pueden usarse sin valor asignado",
+      "El tipo de retorno debe coincidir con la función"
+    ],
+    answer: [
+      "Cada identificador debe declararse antes de usarse",
+      "El número y tipo de argumentos debe coincidir",
+      "El tipo de retorno debe coincidir con la función"
+    ],
+    explanation: "El analizador semántico garantiza la coherencia lógica del programa."
   },
+
+  {
+    type: "single",
+    question: "¿Qué estructura genera el analizador semántico a partir del árbol de análisis?",
+    options: ["Árbol de sintaxis abstracta (AST)", "Código máquina", "Diagrama UML", "Árbol binario sin nodos"],
+    answer: "Árbol de sintaxis abstracta (AST)",
+    explanation: "El AST elimina detalles innecesarios del árbol de análisis concreto."
+  },
+
+  {
+    type: "fill",
+    question: "El árbol de sintaxis abstracta se conoce comúnmente por sus siglas ____. ",
+    answer: "AST",
+    explanation: "AST significa Abstract Syntax Tree."
+  },
+
+  {
+    type: "boolean",
+    question: "El árbol de análisis y el árbol de sintaxis abstracta contienen exactamente la misma información.",
+    answer: false,
+    explanation: "El AST es una versión simplificada del árbol de análisis."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué fase transforma el árbol sintáctico en código intermedio?",
+    options: ["Generación de código intermedio", "Optimización", "Preprocesamiento", "Escaneo"],
+    answer: "Generación de código intermedio",
+    explanation: "Esta fase crea una representación ideal para el back-end del compilador."
+  },
+
+  {
+    type: "multiple",
+    question: "Selecciona características del código intermedio:",
+    options: [
+      "Puede ser compartido entre varios compiladores",
+      "Es independiente de la máquina",
+      "Se asemeja al ensamblador",
+      "Es ejecutable directamente"
+    ],
+    answer: [
+      "Puede ser compartido entre varios compiladores",
+      "Es independiente de la máquina",
+      "Se asemeja al ensamblador"
+    ],
+    explanation: "El código intermedio facilita la portabilidad y modularidad del compilador."
+  },
+
+  {
+    type: "boolean",
+    question: "El generador de código traduce la forma intermedia al lenguaje de destino.",
+    answer: true,
+    explanation: "Esta fase convierte el AST o código intermedio en código máquina o ensamblador."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué fase asigna ubicaciones de memoria a las variables?",
+    options: ["Generación de código", "Análisis léxico", "Optimización", "Semántica dinámica"],
+    answer: "Generación de código",
+    explanation: "El generador de código recorre la tabla de símbolos y asigna direcciones a las variables."
+  },
+
+  {
+    type: "fill",
+    question: "La fase de mejora del código también se conoce como ____.",
+    answer: "optimización",
+    explanation: "Busca mejorar la eficiencia del código sin alterar su resultado."
+  },
+
+  {
+    type: "boolean",
+    question: "La optimización garantiza un código perfecto en términos absolutos.",
+    answer: false,
+    explanation: "Rara vez produce un código óptimo en sentido absoluto; solo mejora el existente."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué tipo de optimización requiere conocimiento del hardware de destino?",
+    options: [
+      "Optimización dependiente de máquina",
+      "Optimización independiente de máquina",
+      "Optimización léxica",
+      "Optimización estática"
+    ],
+    answer: "Optimización dependiente de máquina",
+    explanation: "Algunas optimizaciones dependen de la arquitectura del procesador."
+  },
+
+  {
+    type: "multiple",
+    question: "Selecciona fases típicas del back-end del compilador:",
+    options: [
+      "Generación de código intermedio",
+      "Generación de código de destino",
+      "Optimización de código",
+      "Análisis léxico"
+    ],
+    answer: ["Generación de código de destino", "Optimización de código"],
+    explanation: "El back-end se centra en producir y mejorar el código ejecutable."
+  },
+
+  {
+    type: "fill",
+    question: "Las reglas semánticas que solo se pueden verificar en ejecución pertenecen a la semántica ____. ",
+    answer: "dinámica",
+    explanation: "La semántica dinámica requiere validación en tiempo de ejecución."
+  },
+
   {
     type: "match",
-    question: "Empareja el lenguaje con su paradigma principal.",
+    question: "Relaciona cada fase con su propósito:",
     pairs: {
-      left: ["Prolog", "Haskell", "C++", "Python"],
+      left: [
+        "Análisis léxico",
+        "Análisis sintáctico",
+        "Análisis semántico",
+        "Generación de código",
+        "Optimización"
+      ],
       right: [
-        "Lógico",
-        "Funcional",
-        "Orientado a objetos",
-        "Multiparadigma"
+        "Agrupa caracteres en tokens",
+        "Construye el árbol de análisis",
+        "Comprueba el significado del programa",
+        "Traduce a lenguaje de destino",
+        "Mejora el rendimiento"
       ]
     },
     answer: {
-      "Prolog": "Lógico",
-      "Haskell": "Funcional",
-      "C++": "Orientado a objetos",
-      "Python": "Multiparadigma"
+      "Análisis léxico": "Agrupa caracteres en tokens",
+      "Análisis sintáctico": "Construye el árbol de análisis",
+      "Análisis semántico": "Comprueba el significado del programa",
+      "Generación de código": "Traduce a lenguaje de destino",
+      "Optimización": "Mejora el rendimiento"
     },
-    explanation: "Cada lenguaje puede seguir uno o más paradigmas según su diseño."
+    explanation: "Resumen de las fases del compilador y sus funciones principales."
   }
 ];

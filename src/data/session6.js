@@ -1,244 +1,269 @@
-// src/data/session6.js
 export const session6 = [
-  // === SELECCIÓN SIMPLE ===
   {
     type: "single",
-    question: "¿Qué es un entorno de ejecución en el contexto de los lenguajes de programación?",
+    question: "¿Qué estudia la sintaxis en un lenguaje de programación?",
     options: [
-      "Un conjunto de bibliotecas externas",
-      "La infraestructura que administra la ejecución de un programa",
-      "Un compilador especializado para ejecutar código",
-      "El conjunto de variables globales en un programa"
+      "La estructura formal del código",
+      "El significado del programa",
+      "El flujo de ejecución del hardware",
+      "La eficiencia del compilador"
     ],
-    answer: "La infraestructura que administra la ejecución de un programa",
-    explanation: "El entorno de ejecución gestiona recursos, memoria y flujo de ejecución del programa."
-  },
-  {
-    type: "single",
-    question: "¿Cuál de las siguientes estructuras gestiona el almacenamiento temporal de variables locales?",
-    options: ["Heap", "Pila", "Registro", "Buffer"],
-    answer: "Pila",
-    explanation: "La pila de ejecución se usa para almacenar variables locales y direcciones de retorno."
-  },
-  {
-    type: "single",
-    question: "¿Qué área de memoria se usa para almacenar objetos creados dinámicamente?",
-    options: ["Stack", "Heap", "Registro", "ROM"],
-    answer: "Heap",
-    explanation: "El heap permite la asignación dinámica de memoria en tiempo de ejecución."
-  },
-  {
-    type: "single",
-    question: "¿Cuál es el propósito del recolector de basura (garbage collector)?",
-    options: [
-      "Liberar memoria ocupada por objetos no referenciados",
-      "Aumentar la velocidad de ejecución del programa",
-      "Eliminar variables locales automáticamente",
-      "Evitar errores de sintaxis"
-    ],
-    answer: "Liberar memoria ocupada por objetos no referenciados",
-    explanation: "El recolector de basura gestiona automáticamente la memoria no utilizada."
-  },
-  {
-    type: "single",
-    question: "¿Qué técnica de optimización busca evitar el cálculo repetido de expresiones?",
-    options: [
-      "Eliminación de subexpresiones comunes",
-      "Expansión de bucles",
-      "Propagación de constantes",
-      "Reordenamiento de instrucciones"
-    ],
-    answer: "Eliminación de subexpresiones comunes",
-    explanation: "Esta optimización evita recalcular valores que ya se conocen."
+    answer: "La estructura formal del código",
+    explanation: "La sintaxis define cómo deben organizarse los elementos del lenguaje."
   },
 
-  // === SELECCIÓN MÚLTIPLE ===
   {
-    type: "multiple",
-    question: "Selecciona las principales áreas de memoria usadas durante la ejecución de un programa.",
-    options: ["Stack", "Heap", "Código", "Datos globales", "Cache L3"],
-    answer: ["Stack", "Heap", "Código", "Datos globales"],
-    explanation: "Estas son las secciones fundamentales en el modelo de memoria de un programa."
-  },
-  {
-    type: "multiple",
-    question: "Selecciona las tareas realizadas por un entorno de ejecución.",
-    options: [
-      "Gestión de memoria",
-      "Carga de bibliotecas",
-      "Manejo de excepciones",
-      "Análisis sintáctico",
-      "Interpretación o ejecución del código"
-    ],
-    answer: [
-      "Gestión de memoria",
-      "Carga de bibliotecas",
-      "Manejo de excepciones",
-      "Interpretación o ejecución del código"
-    ],
-    explanation: "El entorno de ejecución controla la memoria, las excepciones y la ejecución del programa."
-  },
-  {
-    type: "multiple",
-    question: "Selecciona ejemplos de optimización de código a nivel de compilador.",
-    options: [
-      "Eliminación de código muerto",
-      "Desenrollamiento de bucles",
-      "Cambio de estilo de codificación",
-      "Propagación de constantes"
-    ],
-    answer: [
-      "Eliminación de código muerto",
-      "Desenrollamiento de bucles",
-      "Propagación de constantes"
-    ],
-    explanation: "Estas técnicas mejoran el rendimiento del programa generado."
-  },
-  {
-    type: "multiple",
-    question: "Selecciona los beneficios de la recolección automática de basura.",
-    options: [
-      "Reduce fugas de memoria",
-      "Simplifica la administración de memoria",
-      "Elimina errores lógicos",
-      "Evita accesos a memoria liberada"
-    ],
-    answer: [
-      "Reduce fugas de memoria",
-      "Simplifica la administración de memoria",
-      "Evita accesos a memoria liberada"
-    ],
-    explanation: "La gestión automática de memoria previene errores comunes en la asignación manual."
+    type: "boolean",
+    question: "La semántica describe la forma del código, mientras que la sintaxis describe su significado.",
+    answer: false,
+    explanation: "Es al revés: la sintaxis describe la forma y la semántica el significado."
   },
 
-  // === VERDADERO / FALSO ===
   {
-    type: "boolean",
-    question: "El recolector de basura se ejecuta manualmente por el programador.",
-    answer: false,
-    explanation: "El recolector se activa automáticamente en entornos gestionados como Java o .NET."
+    type: "fill",
+    question: "La notación formal usada para definir la sintaxis de un lenguaje se llama ____. ",
+    answer: "gramática",
+    explanation: "Las gramáticas formales describen las reglas sintácticas del lenguaje."
   },
+
   {
-    type: "boolean",
-    question: "El heap es más rápido que la pila en operaciones de acceso.",
-    answer: false,
-    explanation: "El acceso al heap es más lento debido a su naturaleza dinámica."
+    type: "multiple",
+    question: "Selecciona las razones por las que es importante distinguir entre sintaxis y semántica:",
+    options: [
+      "Facilita el aprendizaje de nuevos lenguajes",
+      "Permite analizar estructuras sin interpretar significado",
+      "Aumenta la velocidad de compilación",
+      "Evita ambigüedades entre forma y función"
+    ],
+    answer: [
+      "Facilita el aprendizaje de nuevos lenguajes",
+      "Permite analizar estructuras sin interpretar significado",
+      "Evita ambigüedades entre forma y función"
+    ],
+    explanation: "Separar sintaxis y semántica mejora la claridad y el análisis del lenguaje."
   },
+
   {
     type: "boolean",
-    question: "La optimización de código puede realizarse tanto en compiladores como en intérpretes.",
+    question: "Los lenguajes formales eliminan la posibilidad de ambigüedades en la interpretación del código.",
     answer: true,
-    explanation: "Ambos pueden optimizar el rendimiento mediante distintas técnicas."
+    explanation: "El objetivo de la formalidad es especificar reglas sin ambigüedad."
   },
+
+  {
+    type: "single",
+    question: "¿Qué símbolo representa la repetición en las expresiones regulares?",
+    options: ["|", "*", "+", "?"],
+    answer: "*",
+    explanation: "La estrella de Kleene (*) indica repetición cero o más veces."
+  },
+
+  {
+    type: "fill",
+    question: "El símbolo que representa una o más repeticiones en EBNF se conoce como ____. ",
+    answer: "Kleene plus",
+    explanation: "El operador + indica una o más repeticiones."
+  },
+
   {
     type: "boolean",
-    question: "En la memoria estática se almacenan variables globales y constantes.",
-    answer: true,
-    explanation: "Las variables globales y constantes se ubican en la región de datos estáticos."
-  },
-  {
-    type: "boolean",
-    question: "La propagación de constantes es una técnica de análisis léxico.",
+    question: "Las expresiones regulares permiten definir construcciones anidadas.",
     answer: false,
-    explanation: "Es una técnica de optimización, no de análisis léxico."
+    explanation: "Las construcciones anidadas requieren gramáticas libres de contexto, no expresiones regulares."
   },
 
-  // === COMPLETAR ===
   {
-    type: "fill",
-    question: "El área de memoria donde se almacenan variables locales se llama ________.",
-    answer: "pila",
-    explanation: "La pila o stack contiene variables locales y direcciones de retorno."
-  },
-  {
-    type: "fill",
-    question: "El proceso de recuperar memoria no utilizada se conoce como ________.",
-    answer: "recolección de basura",
-    explanation: "También llamado garbage collection."
-  },
-  {
-    type: "fill",
-    question: "Las variables creadas dinámicamente se almacenan en la región llamada ________.",
-    answer: "heap",
-    explanation: "El heap se usa para asignaciones dinámicas de memoria."
-  },
-  {
-    type: "fill",
-    question: "La técnica que reemplaza variables constantes directamente en el código se llama ________.",
-    answer: "propagación de constantes",
-    explanation: "Esta técnica reduce el número de operaciones en tiempo de ejecución."
-  },
-  {
-    type: "fill",
-    question: "La estructura que mantiene información sobre las funciones activas se denomina ________.",
-    answer: "pila de ejecución",
-    explanation: "Contiene los registros de activación de cada función en ejecución."
+    type: "single",
+    question: "¿Qué tipo de lenguaje se genera al añadir recursión a las reglas formales?",
+    options: [
+      "Lenguaje regular",
+      "Lenguaje libre de contexto",
+      "Lenguaje dinámico",
+      "Lenguaje semántico"
+    ],
+    answer: "Lenguaje libre de contexto",
+    explanation: "La recursión define los lenguajes libres de contexto, base de las gramáticas."
   },
 
-  // === EMPAREJAR ===
   {
-    type: "match",
-    question: "Relaciona el segmento de memoria con su función.",
-    pairs: {
-      left: ["Código", "Datos", "Heap", "Stack"],
-      right: [
-        "Contiene las instrucciones del programa",
-        "Guarda variables globales y estáticas",
-        "Almacena objetos dinámicos",
-        "Guarda variables locales y direcciones de retorno"
-      ]
-    },
-    answer: {
-      "Código": "Contiene las instrucciones del programa",
-      "Datos": "Guarda variables globales y estáticas",
-      "Heap": "Almacena objetos dinámicos",
-      "Stack": "Guarda variables locales y direcciones de retorno"
-    },
-    explanation: "Cada segmento tiene una función específica dentro del modelo de memoria."
+    type: "multiple",
+    question: "Selecciona los operadores básicos de las expresiones regulares:",
+    options: ["Concatenación", "Alternancia", "Cierre de Kleene", "Recursión"],
+    answer: ["Concatenación", "Alternancia", "Cierre de Kleene"],
+    explanation: "Estos tres operadores son los fundamentales para construir lenguajes regulares."
   },
+
   {
-    type: "match",
-    question: "Relaciona la técnica de optimización con su descripción.",
-    pairs: {
-      left: [
-        "Eliminación de código muerto",
-        "Propagación de constantes",
-        "Desenrollamiento de bucles",
-        "Reordenamiento de instrucciones"
-      ],
-      right: [
-        "Suprime instrucciones que nunca se ejecutan",
-        "Reemplaza variables constantes por sus valores",
-        "Duplica iteraciones para reducir saltos",
-        "Reorganiza código para mejorar rendimiento"
-      ]
-    },
-    answer: {
-      "Eliminación de código muerto": "Suprime instrucciones que nunca se ejecutan",
-      "Propagación de constantes": "Reemplaza variables constantes por sus valores",
-      "Desenrollamiento de bucles": "Duplica iteraciones para reducir saltos",
-      "Reordenamiento de instrucciones": "Reorganiza código para mejorar rendimiento"
-    },
-    explanation: "Estas optimizaciones son comunes en compiladores modernos."
+    type: "boolean",
+    question: "El cierre de Kleene permite repetir un patrón un número arbitrario de veces.",
+    answer: true,
+    explanation: "Es el operador de repetición en las expresiones regulares."
   },
+
+  {
+    type: "fill",
+    question: "Las expresiones regulares son utilizadas por los ____ para reconocer patrones de tokens.",
+    answer: "escáneres",
+    explanation: "El escáner usa expresiones regulares para detectar los tokens de un programa."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué estructura no puede ser definida por expresiones regulares?",
+    options: [
+      "Identificadores simples",
+      "Comentarios",
+      "Paréntesis anidados",
+      "Números enteros"
+    ],
+    answer: "Paréntesis anidados",
+    explanation: "Requieren reglas recursivas, por lo tanto, gramáticas libres de contexto."
+  },
+
+  {
+    type: "boolean",
+    question: "Los lenguajes regulares son más expresivos que los libres de contexto.",
+    answer: false,
+    explanation: "Los lenguajes libres de contexto tienen mayor poder expresivo que los regulares."
+  },
+
+  {
+    type: "multiple",
+    question: "Selecciona ejemplos de tokens típicos en lenguajes de programación:",
+    options: ["Palabras clave", "Identificadores", "Números", "Espacios en blanco significativos"],
+    answer: ["Palabras clave", "Identificadores", "Números"],
+    explanation: "Los tokens son unidades léxicas como identificadores o símbolos, no espacios en blanco."
+  },
+
+  {
+    type: "fill",
+    question: "El conjunto de tokens y sus reglas se describe mediante ____ regulares.",
+    answer: "expresiones",
+    explanation: "Las expresiones regulares definen los patrones de tokens."
+  },
+
+  {
+    type: "boolean",
+    question: "Los espacios en blanco generalmente se ignoran por el analizador léxico.",
+    answer: true,
+    explanation: "Solo se usan para separar tokens y no afectan la estructura sintáctica."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué significa que un lenguaje tenga un formato libre?",
+    options: [
+      "Que no tiene reglas de sintaxis",
+      "Que ignora la posición física de los tokens",
+      "Que todos los tokens deben estar en la misma línea",
+      "Que no distingue entre mayúsculas y minúsculas"
+    ],
+    answer: "Que ignora la posición física de los tokens",
+    explanation: "El formato libre se refiere a que el orden importa, pero no la ubicación en el texto."
+  },
+
+  {
+    type: "multiple",
+    question: "Selecciona los elementos que componen una gramática libre de contexto:",
+    options: ["Terminales", "No terminales", "Producciones", "Símbolo inicial"],
+    answer: ["Terminales", "No terminales", "Producciones", "Símbolo inicial"],
+    explanation: "Estos cuatro elementos definen completamente una CFG."
+  },
+
+  {
+    type: "boolean",
+    question: "Los terminales pueden aparecer en el lado izquierdo de una producción.",
+    answer: false,
+    explanation: "Solo los no terminales aparecen en el lado izquierdo de una producción."
+  },
+
+  {
+    type: "fill",
+    question: "El símbolo del lado izquierdo de una producción se llama ____. ",
+    answer: "no terminal",
+    explanation: "Los no terminales representan construcciones sintácticas que se expanden en reglas."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué notación se utiliza comúnmente para expresar gramáticas libres de contexto?",
+    options: ["Forma Backus-Naur (BNF)", "Expresiones regulares", "Kleene algebra", "Lenguaje natural"],
+    answer: "Forma Backus-Naur (BNF)",
+    explanation: "BNF es la notación estándar para especificar gramáticas formales."
+  },
+
+  {
+    type: "boolean",
+    question: "BNF y EBNF tienen el mismo poder expresivo.",
+    answer: true,
+    explanation: "EBNF agrega conveniencia sintáctica, pero no aumenta la capacidad expresiva."
+  },
+
+  {
+    type: "fill",
+    question: "EBNF añade operadores como ____ para una o más repeticiones.",
+    answer: "+",
+    explanation: "El operador '+' indica una o más repeticiones en la notación extendida."
+  },
+
+  {
+    type: "multiple",
+    question: "Selecciona ventajas de la notación BNF y EBNF:",
+    options: [
+      "Claridad formal",
+      "Definición no ambigua",
+      "Facilidad para generar analizadores",
+      "Aumento del rendimiento del compilador"
+    ],
+    answer: ["Claridad formal", "Definición no ambigua", "Facilidad para generar analizadores"],
+    explanation: "BNF proporciona una base formal clara para la definición de lenguajes."
+  },
+
+  {
+    type: "single",
+    question: "¿Qué representa el símbolo de inicio en una gramática?",
+    options: [
+      "El token final del programa",
+      "La construcción general del lenguaje",
+      "El identificador más frecuente",
+      "El terminal raíz del árbol"
+    ],
+    answer: "La construcción general del lenguaje",
+    explanation: "El símbolo inicial define el punto de partida de todas las derivaciones."
+  },
+
+  {
+    type: "boolean",
+    question: "Los analizadores sintácticos distinguen entre diferentes identificadores según su ortografía.",
+    answer: false,
+    explanation: "El analizador semántico se encarga de esa distinción, no el sintáctico."
+  },
+
+  {
+    type: "fill",
+    question: "La capacidad de definir una construcción en términos de sí misma se conoce como ____. ",
+    answer: "recursión",
+    explanation: "La recursión permite construir estructuras sintácticas complejas."
+  },
+
   {
     type: "match",
-    question: "Empareja el componente del entorno de ejecución con su función.",
+    question: "Relaciona los conceptos con su definición:",
     pairs: {
-      left: ["Loader", "Linker", "Runtime", "JIT Compiler"],
+      left: ["Lenguaje regular", "Lenguaje libre de contexto", "Expresión regular", "Gramática BNF"],
       right: [
-        "Carga el programa en memoria",
-        "Combina módulos y bibliotecas",
-        "Administra ejecución y memoria dinámica",
-        "Optimiza código en tiempo de ejecución"
+        "Define patrones de tokens mediante operadores básicos",
+        "Permite estructuras anidadas con recursión",
+        "Conjunto de cadenas generadas sin semántica",
+        "Usa reglas de producción con no terminales y terminales"
       ]
     },
     answer: {
-      "Loader": "Carga el programa en memoria",
-      "Linker": "Combina módulos y bibliotecas",
-      "Runtime": "Administra ejecución y memoria dinámica",
-      "JIT Compiler": "Optimiza código en tiempo de ejecución"
+      "Expresión regular": "Define patrones de tokens mediante operadores básicos",
+      "Lenguaje libre de contexto": "Permite estructuras anidadas con recursión",
+      "Lenguaje regular": "Conjunto de cadenas generadas sin semántica",
+      "Gramática BNF": "Usa reglas de producción con no terminales y terminales"
     },
-    explanation: "Estos componentes forman parte del ciclo de ejecución en sistemas modernos."
+    explanation: "Resumen de los conceptos fundamentales sobre sintaxis formal."
   }
 ];
